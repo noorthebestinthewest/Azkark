@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أذكار الصباح</title>
+    <!-- #region css files -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- #endregion -->
+    <!-- #region fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <!-- #endregion -->
+</head>
+<body class="sapah">
+    <!-- #region header -->
+    <header class="flex-between p-15 w-100">
+        <div class="text flex-align-c">
+            <h1 class="m-none">أذكارك</h1>
+            <h2 class="m-none c-777">ذكر واحد يكفي</h2>
+        </div>
+        <nav>
+            <ul class="flex-align-c">
+                <li><a href="index.html" class="rad-6">الرئيسية</a></li>
+                <li>
+                    <button class="relative" id="box">
+                        <span class="c-pointer rad-6"><i class="fa-solid fa-caret-left arrow" id="icon"></i>الأذكار</span>
+                        <ul class="absolute menu" id="cont">
+                            <li><a href="masaa.html">أذكار المساء</a></li>
+                            <li><a href="sleep.html">أذكار النوم</a></li>
+                            <li><a href="any-time.html">أذكار مطلقة</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li>
+                    <label class="darkmode-lable block m-c w-fit">
+                        <input type="checkbox" id="theme-btn" class="theme-checkbox">
+                        <div></div>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- #endregion -->
+    <!-- #region page -->
+    <section class="page p-20">
+        <h1 class="w-fit m-c m-none heading">أذكار الصباح</h1>
+        <div class="card-container">
+        </div>
+    </section>
+    <!-- #endregion -->
+    <!-- #region footer -->
+    <footer class="flex-between w-100 p-15">
+        <div class="rebort">
+            <a href="proplems.html" class="proplem">إبلاغ عن خطأ</a>
+        </div>
+        <h3 class="txt-c">صل علي النبي</h3>
+        <!-- <div class="contact flex-align-c">
+            <span>تواصل معنا</span>
+            <div class="links">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div> -->
+    </footer>
+    <!-- #endregion -->
+    <script src="js/azkar-sapah.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
