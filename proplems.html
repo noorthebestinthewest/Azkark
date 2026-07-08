@@ -54,14 +54,18 @@
         <div class="problem-box">
             <h2>أخبرنا عن أي مشكلة</h2>
             <p>إذا واجهت خطأ في المحتوى أو التصميم أو أي مشكلة أخرى، اكتب تفاصيلها وسنراجعها.</p>
-            <form class="problem-form">
+            <form class="problem-form" action="https://formspree.io/f/mrewwpqv" method="post">
                 <label>
                     الاسم
-                    <input type="text" placeholder="أدخل اسمك" required>
+                    <input type="text" placeholder="أدخل اسمك" name="username" required>
+                </label>
+                <label>
+                    الإيميل
+                    <input type="text" placeholder="أدخل حسابك" name="email" required>
                 </label>
                 <label>
                     وصف المشكلة
-                    <textarea rows="6" placeholder="اكتب تفاصيل المشكلة هنا..." required></textarea>
+                    <textarea rows="6" placeholder="اكتب تفاصيل المشكلة هنا..." name="massage" required></textarea>
                 </label>
                 <button type="submit">إرسال</button>
             </form>
