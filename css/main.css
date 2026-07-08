@@ -26,6 +26,7 @@ body.light-mode {
     --btn-bg: linear-gradient(135deg, #dfb260, #b99a5f);
     --shadow-bg: rgb(163, 162, 162);
     --shadow-bg-hover: gray;
+    --counter-bg: rgb(209, 192, 164);
 }
 body.dark-mode {
     --card-bg-color: #2A2A2A;
@@ -44,6 +45,7 @@ body.dark-mode {
     --btn-bg: linear-gradient(135deg, #d4ba88, #ad8946);
     --shadow-bg: rgb(65, 58, 57);
     --shadow-bg-hover: rgb(88, 88, 88);
+    --counter-bg: #353232;
 }
 html {
     background-color: var(--body-c);
@@ -55,6 +57,7 @@ body {
 }
 .page {
     min-height: 78vh;
+    background-color: #8a6c3636;
 }
 header {
     border-bottom: 1px solid var(--main-c) !important;
@@ -227,18 +230,12 @@ header button .open li:hover {
 .dark-mode header button .open li:hover a {
     color: var(--main-c);
 }
-header button .open li {
-    padding: 10px;
+header button .open a {
+    padding: 7px;
+    display: block;
 }
 header button .open li:not(:last-of-type) {
-    padding-bottom: 4px;
     border-bottom: 1px solid var(--second-c);
-}
-header button .open li:first-of-type {
-    border-radius: 6px 6px 0 0;
-}
-header button .open li:last-of-type {
-    border-radius: 0 0 9px 6px;
 }
 header button ul li a {
     color: var(--main-text-c);
@@ -357,6 +354,29 @@ footer i {
     margin-top: 30px;
     background-color: var(--card-bg-color);
     border: 1px solid var(--main-c);
+    position: relative;
+}
+.sapah .page .card::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--main-text-c);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    background-color: rgb(38, 172, 38);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    opacity: 0;
+    transition: var(--main-transition);
+}
+.sapah .page .card.done::before {
+    opacity: 1;
 }
 .sapah .page .card .info {
     font-size: 15px;
@@ -373,10 +393,16 @@ footer i {
 }
 .sapah .page .card h3 {
     color: var(--main-text-c);
+    margin-left: 10px;
 }
 .sapah .page .card .txt {
     color: var(--second-txt-c);
     font-weight: 500;
+}
+.sapah .page .card .repeat-text {
+    background-color: #d4a1435b;
+    padding: 2px 10px ;
+    border-radius: 10px;
 }
 .sapah .page .card .flex-between,
 .sapah .page .card > p {
@@ -391,8 +417,10 @@ footer i {
     }
 }
 .sapah .page .card .counter-holder {
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 20px;
+    background-color: var(--counter-bg);
+    margin-top: 20px;
 }
 .sapah .page .card .counter-holder button {
     color: var(--main-text-c);
