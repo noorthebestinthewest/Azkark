@@ -12,6 +12,7 @@
 body.light-mode {
     --card-bg-color: rgb(230, 215, 195);
     --card-hover-bg-color: rgb(209, 192, 164);
+    --card-done-bg: rgba(73, 231, 99, 0.075);
     --main-text-c : black;
     --second-txt-c: #616060;
     --body-c: antiquewhite;
@@ -31,6 +32,7 @@ body.light-mode {
 body.dark-mode {
     --card-bg-color: #2A2A2A;
     --card-hover-bg-color: #353232;
+    --card-done-bg: rgba(73, 231, 99, 0.075);
     --main-text-c : #f5f5f5;
     --second-txt-c: #cfcdcd;
     --body-c: #1E1E1E;
@@ -355,6 +357,9 @@ footer i {
     background-color: var(--card-bg-color);
     border: 1px solid var(--main-c);
     position: relative;
+}
+.sapah .page .card.done {
+    background-color: var(--card-done-bg);
 }
 .sapah .page .card::before {
     content: "\f00c";
